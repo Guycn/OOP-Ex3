@@ -20,7 +20,7 @@ class GraphAlgo(GraphAlgoInterface):
     def load_from_json(self, file_name: str) -> bool:
         Graph = DiGraph()
         try:
-            with open("A0") as file:
+            with open("file_name, 'r') as file:
                 load_f = json.load(file)
 
             for tmp in load_f["Nodes"]:
