@@ -20,7 +20,7 @@ class GraphAlgo(GraphAlgoInterface):
     def load_from_json(self, file_name: str) -> bool:
         Graph = DiGraph()
         try:
-            with open("file_name, 'r') as file:
+            with open(file_name, 'r+') as file:
                 load_f = json.load(file)
 
             for tmp in load_f["Nodes"]:
@@ -40,6 +40,8 @@ class GraphAlgo(GraphAlgoInterface):
         except Exception as ex:
             print("Attempt to load from file", ex)
             return False
+        finally:
+            file.close()
 
 
 
@@ -57,12 +59,13 @@ class GraphAlgo(GraphAlgoInterface):
                     data["Edges"].append({"src": src, "w": weight, "dest": dest})
 
             with open(file_name, 'w') as file:
-                json.dump(data, file, ensure_ascii = False, indent = 4, fp = file)
-                file.close()
+                json.dump(data, file, ensure_ascii = False, indent = 4)
                 return True
         except Exception as ex:
             print("Attempt to save failed", ex)
             return False
+        finally:
+            file.close()
 
 
     def short_way(self, id1: int, value: dict, prev: dict):
@@ -188,7 +191,7 @@ class GraphAlgo(GraphAlgoInterface):
                 x2 = p2[0]
                 y2 = p2[1]
 
-                plt.arrow(x1, y1, (x2 - x1), (y2 - y1), width = 0.00005 )
+                plt.arrow(x1, y1, (x2 - x1), (y2 - y1), length_includes_head=True, width=0.000003, head_width=0.0002)
 
         plt.tight_layout()
         plt.xlabel("X")
