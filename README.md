@@ -1,12 +1,21 @@
 # OOP-Ex3
  
-n this project we built a directed graph which is also a weighted graph. Also in this project you will find some algorithms that can be done on a graph that is both directed and weighted.
+In this project we built a directed graph which is also a weighted graph. Also in this project you will find some algorithms that can be done on a graph that is both directed and weighted.
 
 For more information:
 
 https://en.wikipedia.org/wiki/Directed_graph
 
 https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)
+
+![](img/Figure_0.png)
+
+|V|=4 , |E|=5.
+
+0: 1: |edges out| 2 |edges out| 4.
+1: 2: |edges out| 3 |edges in| 1 |edge in| 4.
+2: 3: |edges out| 4 |edges in| 2.
+3: 4: |edges out| 2 |edges in| 1	|edges in| 3.
 
 Here are the departments that build our graph: Node class: This class represents the vertices, when each vertex has the following properties:
 
@@ -59,7 +68,7 @@ load_from_json: Loads a graph from a json file.
 
 save_to_json: Allows to save a graph into a Json file.
 
-shortestPath: Returns the shortest path from node id1 to node id2 using Dijkstra's Algorithm.
+shortestPath: Returns the shortest path from node id1 to node id2 using Dijkstra's Algorithm with complexity of O(nlogv + v) (n - number of vertx).
 
 connected_component: Finds the Strongly Connected Component(SCC) that node id1 is a part of.
 
@@ -68,3 +77,15 @@ connected_components: Finds all the Strongly Connected Component(SCC) in the gra
 isConnected: Checks whether the graph is strongly related, that is, if for any two vertices in the graph we mark them in u, v there is a path between u and v and there is a path between v and u.
 
 plot_graph: Plots the graph.
+
+![](img/Figure_1.png)
+
+![](img/Figure_2.png)
+
+
+
+
+
+Graph plots:
+
+
