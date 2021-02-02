@@ -4,9 +4,9 @@ import random
 import matplotlib as plt
 import matplotlib.pyplot as plt
 
-from src.DiGraph import DiGraph
-from src.GraphAlgoInterface import GraphAlgoInterface
-from src.GraphInterface import GraphInterface
+from DiGraph import DiGraph
+from GraphAlgoInterface import GraphAlgoInterface
+from GraphInterface import GraphInterface
 
 class GraphAlgo(GraphAlgoInterface):
 
