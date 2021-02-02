@@ -1,5 +1,5 @@
-from src.node_data import node_data
-from src.GraphInterface import GraphInterface
+from node_data import node_data
+from GraphInterface import GraphInterface
 
 class DiGraph(GraphInterface):
     def __init__(self):
